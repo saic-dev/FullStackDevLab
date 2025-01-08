@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            const userDetails = {name: 'CVR', age: 25} 
+            const userAddress = {address: 'Mangalpally', city: 'Hyderabad'} 
+            const userPreferences = {theme: 'Engineering Edu', language: 'EN'} 
+            function mergeuserData(...obj)
+            {
+                let newObj={
+                    ...obj
+                }
+                console.log(newObj);
+            }
+            mergeuserData(userDetails,userAddress,userPreferences);
+        </script>
+    </body>
+</html>
