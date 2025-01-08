@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            function mergeArrays(...ar)
+            {
+                let ax=[].concat(...ar);
+                return ax;
+                
+            }
+            let ar1=[1,2,3,4];
+            let ar2=[90,80,70];
+            let ar3=[0];
+            let ar4=["a","b","c"];
+            console.log(mergeArrays(ar1,ar2,ar3,ar4));
+        </script>
+    </body>
+</html>
