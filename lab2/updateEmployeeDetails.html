@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            const employee={
+                name:'Sai Charan',
+                role:'Student',
+                age:20,
+                location:'Hyderabad'
+            };
+            function updateEmployeeDetails(obj,ele)
+            {
+                let Employee={
+                    ...obj,
+                }
+                Employee.role=ele;
+                console.log(Employee);
+            }
+            //employee.role="Senior Developer";
+            console.log(employee);
+            updateEmployeeDetails(employee,'Senior Student');
+        </script>
+    </body>
+</html>
