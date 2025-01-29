@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fetch Api</title>
+    </head>
+    <body>
+        <script>
+            async function example() {
+                let rawData= await fetch('https://jsonplaceholder.typicode.com/posts/2')
+                let data = await rawData.json()
+                console.log(data)    
+            }
+            example()
+            async function xhttpexample() {
+                let xhttp = new XMLHttpRequest();
+                xhttp.open("GET", "https://jsonplaceholder.typicode.com/posts/2", true);
+                xhttp.send();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        let data = JSON.parse(this.responseText);
+                        console.log(data);
+                    }
+                };
+            }
+            xhttpexample()
+        </script>
+    </body>
+</html>
