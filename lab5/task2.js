@@ -1,0 +1,13 @@
+const os=require('os');
+let secs=os.uptime();
+let mins=secs/60;
+let hours=mins/60;
+let days=hours/24;
+days=Math.floor(days);
+secs=Math.floor(secs);
+mins=Math.floor(mins);
+hours=Math.floor(hours);
+secs=secs%60;
+mins=mins%60;
+hours=hours%24;
+console.log(days+" Days "+hours+" hours "+mins+" mins "+secs+" secs");
